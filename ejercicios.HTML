@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de JavaScript</title>
+</head>
+<body>
+    <h1>Ejercicios de JavaScript</h1>
+
+    <script>
+        // Ejercicio 1
+        // Crear un array vacío
+        let numbersArray = [];
+
+        // Generar 10 números al azar y guardarlos en el array
+        for (let i = 0; i < 10; i++) {
+            let randomNumber = Math.floor(Math.random() * 100); // Números aleatorios entre 0 y 99
+            numbersArray.push(randomNumber);
+        }
+
+        // Mostrar el resultado del array en consola
+        console.log("Array con números aleatorios:", numbersArray);
+
+        // Ejercicio 2
+        // Pedir al usuario un string con palabras separadas por coma
+        let userInput = prompt("Ingresa una lista de números separados por coma (e.g., 1,2,3,4,5):");
+
+        // Convertir el string en un array
+        let arrayFromString = userInput.split(',').map(Number); // Convertir cada elemento en número
+
+        // Mostrar el resultado en consola
+        console.log("Array convertido del string:", arrayFromString);
+
+        // Ejercicio 3
+        // Array dado
+        let numbers = [10, 40, 30, 20, 15, 5];
+
+        // Ordenar el array de menor a mayor
+        let sortedArray = numbers.slice().sort((a, b) => a - b);
+
+        // Encontrar el número menor y mayor
+        let minNumber = Math.min(...numbers);
+        let maxNumber = Math.max(...numbers);
+
+        // Mostrar los resultados en consola
+        console.log("El arreglo ordenado de menor a mayor:", sortedArray);
+        console.log("Número menor:", minNumber);
+        console.log("Número mayor:", maxNumber);
+    </script>
+</body>
+</html>
